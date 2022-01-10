@@ -64,3 +64,24 @@ var fight = function(enemyName) {
     }
   }
 };
+
+var shopOptionPrompt = window.prompt(
+  "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one 1 for REFILL, 2 for UPGRADE, or 3 for LEAVE."
+);
+
+// use switch case to carry out action
+switch (shopOptionPrompt) {
+  case 1:
+    playerInfo.refillHealth();
+    break;
+  case 2:
+    playerInfo.upgradeAttack();
+    break;
+  case 3:
+    window.alert("Leaving the store.");
+    break;
+  default:
+    window.alert("You did not pick a valid option. Try again.");
+    shop();
+    break;
+}
